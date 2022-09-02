@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -39,7 +40,7 @@ public void open(){
 
     try {
         String texto = Files.readString(file.toPath());
-        textArea.setText(Texto);
+        textArea.setText(texto);
 
     } catch (IOException e) {
         Alert alert = new Alert(AlertType.ERROR);
